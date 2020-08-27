@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Lesson_07_Exercises.App
 {
@@ -11,5 +13,6 @@ namespace Lesson_07_Exercises.App
         public int EloRating { get; set; }
         public TimeSpan ThisYearTrainingTime { get; set; }
         public Country Country { get; set; }
+
     }
 }
