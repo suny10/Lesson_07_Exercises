@@ -31,28 +31,32 @@ namespace Lesson_07_Exercises.App
             var player1 = new ChessPlayer();
             player1.FirstName = "Giovanni";
             player1.Country = Country.Italy;
-            player1.Birthdate = new System.DateTime(1990, 12, 5);
+            //player1.Birthdate = new System.DateTime(1990, 12, 5);
+            player1.AgeInYears = 15;
             player1.EloRating = 15;
             var player2 = new ChessPlayer();
             player2.FirstName = "Vincenzo";
             player2.Country = Country.Italy;
-            player2.Birthdate = new System.DateTime(1982, 12, 5);
+            player2.AgeInYears = 45;
+            //player2.Birthdate = new System.DateTime(1982, 12, 5);
             player2.EloRating = 23;
             var player3 = new ChessPlayer();
             player3.FirstName = "Ivan";
+            player3.AgeInYears = 22;
             player3.Country = Country.Russia;
-            player3.Birthdate = new System.DateTime(1982, 12, 5);
+            // player3.Birthdate = new System.DateTime(1982, 12, 5);
             player3.EloRating = 40;
             myChessPlayerParser.chessPlayers.Add(player1);
             myChessPlayerParser.chessPlayers.Add(player2);
             myChessPlayerParser.chessPlayers.Add(player3);
 
             //var playersResults = myChessPlayerParser.GetChessPlayersOlderThanSpecifiedAgeFromSpecifiedCoutry(14, Country.Italy);
-            var playersResults = myChessPlayerParser.GetChessPlayersOlderThanSpecifiedAge(14);
+            var playersResults = myChessPlayerParser.GetChessPlayersWithHigherOrEqualEloRatingGroupedByCountry(23, Country.Italy);
+            //var playersResults = myChessPlayerParser.GetChessPlayersOlderThanSpecifiedAge(14);
 
             foreach (var item in playersResults)
             {
-                Console.WriteLine(item.FirstName);
+                Console.WriteLine(item);
             }
         }
     }
