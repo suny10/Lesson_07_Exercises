@@ -8,7 +8,7 @@ namespace Lesson_07_Exercises.App
         IEnumerable<ChessPlayer> GetChessPlayersOlderThanSpecifiedAge(int ageInYears);
         IEnumerable<ChessPlayer> GetChessPlayersInEloRatingRange(int minEloRating, int maxEloRating);
         IEnumerable<ChessPlayer> GetChessPlayersOlderThanSpecifiedAgeFromSpecifiedCoutry(int ageInYears, Country country);
-        IEnumerable<IGrouping<Country, ChessPlayer>> GetChessPlayersWithHigherOrEqualEloRatingGroupedByCountry(int minEloRating, Country country);
+        IEnumerable<IGrouping<Country, ChessPlayer>> GetChessPlayersWithHigherOrEqualEloRatingGroupedByCountry(int minEloRating);
 
     }
 }

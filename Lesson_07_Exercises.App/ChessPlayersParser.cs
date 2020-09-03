@@ -32,9 +32,9 @@ namespace Lesson_07_Exercises.App
             return results;
         }
 
-        public IEnumerable<IGrouping<Country, ChessPlayer>> GetChessPlayersWithHigherOrEqualEloRatingGroupedByCountry(int minEloRating, Country country)
+        public IEnumerable<IGrouping<Country, ChessPlayer>> GetChessPlayersWithHigherOrEqualEloRatingGroupedByCountry(int minEloRating)
         {
-            var results = chessPlayers.Where(n => n.EloRating >= minEloRating).Where(n => n.Country == country).GroupBy(p => p.Country);
+            IEnumerable<IGrouping<Country, ChessPlayer>> results = chessPlayers.Where(n => n.EloRating >= minEloRating).GroupBy(p => p.Country);
             return results;
         }
     }
