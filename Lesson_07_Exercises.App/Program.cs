@@ -71,7 +71,6 @@ namespace Lesson_07_Exercises.App
             Console.WriteLine("Players with higher or equal rating 15:");
             foreach (IGrouping<Country, ChessPlayer> item in playersResults2)
             {
-                //Console.WriteLine(item.Key + " " + item.ElementAt(0).FirstName);
                 for (int i = 0; i < item.Count(); i++)
                 {
                     Console.WriteLine(item.Key + " " + item.ElementAt(i).FirstName);
