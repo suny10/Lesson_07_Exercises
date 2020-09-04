@@ -13,8 +13,9 @@ namespace Lesson_07_Exercises.App
 
             List<int> myNumbers = new List<int>() { 1, 10, 13, 45, 23, 245, 432, 123, 4523, 14564, 785, 8, 20, 32, 14, 18, 25 };
 
-            List<int> myNumbers2 = new List<int>() { 2,3, 6,12,18,21,4,5 };
-            List<int> myDivisors = new List<int>() { 2, 3};
+            List<int> myNumbers2 = new List<int>() { 2, 3, 6, 12, 18, 21, 4, 5 };
+
+            List<int> myDivisors = new List<int>() { 2, 3 };
 
             var oddNumbers = myNumberHandler.GetOddNumbers(myNumbers);
             var evenNumbers = myNumberHandler.GetEvenNumbers(myNumbers);
@@ -23,7 +24,7 @@ namespace Lesson_07_Exercises.App
             var notDivisibleNumbers = myNumberHandler.GetNumbersNotDivisibleByAnyDivisor(myNumbers2, myDivisors);
 
 
-            printer.PrintNumbers("Odd numbers",oddNumbers);
+            printer.PrintNumbers("Odd numbers", oddNumbers);
             printer.PrintNumbers("Even numbers", evenNumbers);
             printer.PrintNumbers("Numbers divisible by all divisors", divisibleByAllNumbers);
             printer.PrintNumbers("Numbers divisible by at least one divisor", divisibleByAtLeastOneNumbers);
@@ -50,8 +51,9 @@ namespace Lesson_07_Exercises.App
             player3.FirstName = "Ivan";
             player3.AgeInYears = 22;
             player3.Country = Country.Russia;
-             player3.Birthdate = new System.DateTime(1982, 12, 5);
+            player3.Birthdate = new System.DateTime(1982, 12, 5);
             player3.EloRating = 40;
+
             myChessPlayerParser.chessPlayers.Add(player1);
             myChessPlayerParser.chessPlayers.Add(player2);
             myChessPlayerParser.chessPlayers.Add(player3);
@@ -60,13 +62,13 @@ namespace Lesson_07_Exercises.App
             var playersResults2 = myChessPlayerParser.GetChessPlayersWithHigherOrEqualEloRatingGroupedByCountry(15);
             var playersResults3 = myChessPlayerParser.GetChessPlayersOlderThanSpecifiedAge(16);
 
-            Console.WriteLine("Players oldler than 14 from italy");
+            Console.WriteLine("Players oldler than 14 from italy:");
             foreach (var item in playersResults)
             {
                 Console.WriteLine(item.FirstName);
             }
 
-            Console.WriteLine("Players with higher or equal rating");
+            Console.WriteLine("Players with higher or equal rating 15:");
             foreach (IGrouping<Country, ChessPlayer> item in playersResults2)
             {
                 //Console.WriteLine(item.Key + " " + item.ElementAt(0).FirstName);
@@ -76,7 +78,7 @@ namespace Lesson_07_Exercises.App
                 }
             }
 
-            Console.WriteLine("Older players than 16");
+            Console.WriteLine("Older players than 16:");
             foreach (var item in playersResults3)
             {
                 Console.WriteLine(item.FirstName);
